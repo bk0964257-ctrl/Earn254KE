@@ -1,30 +1,26 @@
-# Earn254 Flutter MVP
+# Earn254 Ready Project
 
-This is the first working UI prototype for a Kenyan rewards app.
+This package contains the first Earn254 Flutter MVP plus basic configuration
+and legal starter documents.
 
 ## Included
-- Dashboard
-- KSh wallet balance
-- Reward tasks
-- Demo task completion
-- Withdrawal screen
-- M-PESA number input
-- Profile screen
+- `lib/main.dart` — app UI
+- `lib/app_config.dart` — support number and safe app settings
+- `pubspec.yaml` — Flutter dependencies
+- `config/app_config.json` — app configuration
+- `docs/PRIVACY_POLICY.md` — starter privacy policy
+- `docs/TERMS_OF_USE.md` — starter terms
+- `README.md` — project instructions
 
-## Important
-M-PESA withdrawals are NOT live yet. The withdrawal button currently creates a demo request only.
+## Owner support number
+0142096403
 
-## Run
-1. Install Flutter.
-2. Open this folder in Android Studio or VS Code.
-3. Run `flutter pub get`.
-4. Run `flutter run`.
-5. For an Android release build, use `flutter build apk --release`.
+## Important security note
+Do NOT put Safaricom Daraja consumer secret, consumer key, passwords, M-PESA
+PINs, access tokens, or other private credentials in this mobile app or GitHub.
+Real M-PESA payments should be handled by a secure backend.
 
-Next production steps:
-- Add Firebase/backend authentication.
-- Store balances and transactions server-side.
-- Add an admin dashboard.
-- Add real task/sponsor revenue.
-- Integrate Safaricom Daraja for production M-PESA payments.
-- Add fraud/anti-abuse controls before allowing real withdrawals.
+## Current status
+M-PESA withdrawal is demo-only. Real withdrawals require a backend, proper
+Safaricom Daraja production access, transaction verification, fraud controls,
+and a real source of revenue to fund rewards.
