@@ -1,26 +1,37 @@
-# Earn254 Ready Project
+# Earn254 — Full Project
 
-This package contains the first Earn254 Flutter MVP plus basic configuration
-and legal starter documents.
+Kenya-focused rewards application.
 
-## Included
-- `lib/main.dart` — app UI
-- `lib/app_config.dart` — support number and safe app settings
-- `pubspec.yaml` — Flutter dependencies
-- `config/app_config.json` — app configuration
-- `docs/PRIVACY_POLICY.md` — starter privacy policy
-- `docs/TERMS_OF_USE.md` — starter terms
-- `README.md` — project instructions
+## Project structure
+- `lib/` Flutter mobile application
+- `backend/` secure server for M-PESA B2C requests
+- `config/` public application configuration
+- `docs/` starter privacy policy and terms
 
-## Owner support number
+## Owner support
 0142096403
 
-## Important security note
-Do NOT put Safaricom Daraja consumer secret, consumer key, passwords, M-PESA
-PINs, access tokens, or other private credentials in this mobile app or GitHub.
-Real M-PESA payments should be handled by a secure backend.
+## Build the Android app
+1. Install Flutter.
+2. Run `flutter pub get`.
+3. Run `flutter build apk --release`.
+4. APK: `build/app/outputs/flutter-apk/release/app-release.apk`
 
-## Current status
-M-PESA withdrawal is demo-only. Real withdrawals require a backend, proper
-Safaricom Daraja production access, transaction verification, fraud controls,
-and a real source of revenue to fund rewards.
+## M-PESA
+The mobile app is intentionally kept free of Daraja secrets. Configure the
+backend with your own authorized Safaricom Daraja production credentials using
+environment variables.
+
+Before public launch, add:
+- authenticated user accounts
+- server-side wallet ledger
+- server-side task verification
+- withdrawal database/queue
+- fraud and duplicate-withdrawal protection
+- verified revenue source
+- Daraja result/callback handling
+- proper privacy policy/terms review
+
+The supplied project is a complete buildable application and backend
+structure, but live M-PESA cannot be activated without the owner's authorized
+Daraja business credentials and production setup.
